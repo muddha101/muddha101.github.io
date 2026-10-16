@@ -1,0 +1,656 @@
+{
+  "profile": {
+    "nameEn": "BAE Yosup",
+    "nameKo": "배요섭",
+    "portrait": "img/up-1792137926465.jpg",
+    "roles": {
+      "en": "Director · Performer · Writer · Researcher",
+      "ko": "연출가 · 퍼포머 · 작가 · 연구자"
+    },
+    "location": {
+      "en": "Hwacheon, Gangwon-do, South Korea",
+      "ko": "강원도 화천"
+    },
+    "heroImage": "img/sb-ink.jpg",
+    "heroCaption": {
+      "en": "Strange Beauty (2022)",
+      "ko": "〈스트레인지 뷰티〉 2022"
+    },
+    "intro": {
+      "en": "A theatre maker, director and performer working on the relationship between the human body and objects as agents in their own right. Trained first in physics and then in theatre directing, his work began in puppet and object theatre, moved toward new-materialist practice, and now turns on questions of consciousness, the senses, non-human beings and artificial intelligence.",
+      "ko": "인간의 몸과, 그 자체로 행위자인 오브제들 사이의 관계를 탐구하는 공연작가이자 연출가, 퍼포머입니다. 물리학을 공부한 뒤 연극연출을 전공했습니다. 인형과 오브제의 연극에서 출발한 작업은 신유물론적 관점의 작업으로 이어졌고, 지금은 의식과 감각, 비인간 존재와 인공지능에 대한 질문으로 나아가고 있습니다."
+    }
+  },
+  "statement": {
+    "en": "My work has always lived between two worlds. One is scientific thinking: an interest in matter, the cosmos and structure. The other is artistic practice: the body, the senses, images, improvisation and community.\n\nThrough yoga, kalaripayattu, movement meditation and improvisation I came to understand the body not as a tool of expression but as an instrument for asking questions. So for me a performance is less about what to show than about how to share my encounter with the world with others. In that sharing, bodies and objects act as equals.\n\nGood art becomes possible when there is a good life, and I believe good art can lead toward a good life.",
+    "ko": "나의 작업은 언제나 두 세계 사이에 있었다. 하나는 과학적 사고, 물질, 우주, 구조에 대한 관심이고, 다른 하나는 몸, 감각, 이미지, 즉흥, 공동체에 대한 예술적 실천이다.\n\n요가와 칼라리파야트, 움직임 명상, 즉흥 훈련을 거치며 몸을 표현의 도구가 아니라 질문하는 장치로 이해하게 되었다. 그래서 나에게 공연은 무엇을 보여줄 것인가보다, 나와 세계의 만남을 어떻게 타자와 나눌 수 있는가에 가깝다. 그 나눔 속에서 몸과 오브제는 동등하게 작동한다.\n\n좋은 삶이 있을 때 좋은 예술이 가능하듯, 좋은 예술이 좋은 삶을 이끌 수 있다고 믿는다."
+  },
+  "phases": [
+    {
+      "years": "1970–",
+      "name": {
+        "en": "Yosup",
+        "ko": "요섭"
+      },
+      "subtitle": {
+        "en": "An individual asking questions through the body",
+        "ko": "몸으로 질문하는 개인"
+      },
+      "text": {
+        "en": "Physics taught him to see the world as matter, force, relation and motion. Theatre showed him how the body senses, remembers and meets others.",
+        "ko": "물리학은 세계를 물질, 힘, 관계, 운동으로 보게 했고, 연극은 몸이 세계를 감각하고 기억하고 타자와 관계 맺는 방식을 경험하게 했다."
+      }
+    },
+    {
+      "years": "2001–2020",
+      "name": {
+        "en": "Performance Group Tuida",
+        "ko": "공연창작집단 뛰다"
+      },
+      "subtitle": {
+        "en": "Open theatre, nature-friendly theatre, moving theatre",
+        "ko": "열린 연극, 자연친화적 연극, 움직이는 연극"
+      },
+      "text": {
+        "en": "With performance group Tuida (Korean for “to run, to leap, the heart beats”) he built a polyphonic stage language of bodies, objects, puppets, masks and live music. In 2010 the group moved to a closed rural school in Hwacheon and founded Tutbat Arts Farm, folding daily life into creation. Its final period turned toward theatre as testimony to historical pain.",
+        "ko": "‘뛰다’는 달리다, 도약하다, 심장이 뛰다라는 뜻이다. 몸, 오브제, 인형, 가면, 라이브 음악이 얽히는 다성적 무대 언어를 만들었다. 2010년 화천의 폐교로 이주해 예술텃밭을 열고 생활과 창작을 포갰으며, 마지막 시기에는 역사적 고통을 증언하는 연극으로 나아갔다."
+      }
+    },
+    {
+      "years": "2021–",
+      "name": {
+        "en": "Research Collective Muddha",
+        "ko": "리서치 그룹 궁리소묻다"
+      },
+      "subtitle": {
+        "en": "A research platform on consciousness, senses, matter and the non-human",
+        "ko": "의식, 감각, 물질, 비인간 존재를 탐구하는 리서치 플랫폼"
+      },
+      "text": {
+        "en": "Muddha (묻다, “to ask”) tests whether the research process itself can become the work. It asks what a body is, where consciousness comes from, and how the senses compose a world.",
+        "ko": "‘묻다’는 질문한다는 뜻이다. 리서치의 결과가 아니라 과정 자체가 작품이 될 수 있는지를 실험한다. 몸은 무엇인가, 의식은 어디에서 오는가, 감각은 세계를 어떻게 구성하는가를 묻는다."
+      }
+    }
+  ],
+  "featured": [
+    {
+      "title": {
+        "en": "Singularity",
+        "ko": "싱귤래리티"
+      },
+      "year": "2024",
+      "venue": {
+        "en": "Piknic, Seoul",
+        "ko": "피크닉, 서울"
+      },
+      "role": {
+        "en": "Artistic director, creative guide, maker, performer",
+        "ko": "예술감독, 창작가이드, 창작자, 퍼포머"
+      },
+      "text": {
+        "en": "An exhibition-performance built on three years of research (2022–2024). The entire four-storey Piknic building became one structure of consciousness, an eigenvector space for ten collaborating artists, where individual insights meet and break apart at a point of singularity.",
+        "ko": "2022년부터 3년간의 리서치를 바탕으로 한 전시 겸 공연. 피크닉 4층 건물 전체를 하나의 의식 구조이자 참여예술가 10명의 고유벡터 공간으로 설정하고, 개별자의 깨달음이 만나고 깨어지는 특이점에서의 창발을 다루었다."
+      },
+      "images": [
+        "img/up-1792131523230.jpg",
+        "img/up-1792131540710.jpg",
+        "img/up-1792131568758.jpg",
+        "img/up-1792131589209.jpg",
+        "img/up-1792131612905.jpg",
+        "img/up-1792131663950.jpg",
+        "img/up-1792131743429.jpg",
+        "img/up-1792131762839.jpg",
+        "img/up-1792131784374.jpg",
+        "img/up-1792131789761.jpg",
+        "img/up-1792131807913.jpg",
+        "img/up-1792131827374.jpg",
+        "img/up-1792131839796.jpg",
+        "img/up-1792131864457.jpg",
+        "img/up-1792131873985.jpg",
+        "img/up-1792131883779.jpg",
+        "img/up-1792131893384.jpg",
+        "img/up-1792131913116.jpg",
+        "img/up-1792131922082.jpg",
+        "img/up-1792131935319.jpg",
+        "img/up-1792131943132.jpg"
+      ],
+      "link": "https://youtube.com/shorts/1Q8Sy7Rf82w"
+    },
+    {
+      "title": {
+        "en": "The Large, the Small, the Mind",
+        "ko": "우주양자마음"
+      },
+      "year": "2023",
+      "venue": {
+        "en": "Sejong Center for the Performing Arts, S Theater",
+        "ko": "세종문화회관 S씨어터"
+      },
+      "role": {
+        "en": "Research director, director",
+        "ko": "리서치 디렉터, 연출"
+      },
+      "text": {
+        "en": "A performance woven from inspirations found in quantum mechanics, neuroscience and astrophysics. A theatre inside a theatre, a closed system within a closed system, where science and art strike sparks off each other.",
+        "ko": "양자역학, 뇌과학, 천체물리학의 탐구에서 얻은 영감이 얽히고 중첩되어 구성된 공연. 극장 안의 극장, 닫힌 계 안의 또 다른 닫힌 계에서 과학과 예술이 불꽃을 튀기는 시간."
+      },
+      "images": [
+        "img/up-1792132012753.jpg",
+        "img/up-1792132044061.jpg",
+        "img/up-1792132084020.jpg",
+        "img/up-1792132094705.jpg",
+        "img/up-1792132102911.jpg",
+        "img/up-1792132123432.jpg",
+        "img/up-1792132132738.jpg",
+        "img/up-1792132170694.jpg"
+      ],
+      "link": ""
+    },
+    {
+      "title": {
+        "en": "Strange Beauty",
+        "ko": "스트레인지 뷰티"
+      },
+      "year": "2022",
+      "venue": {
+        "en": "Sogeukjang Pan, Seoul · Festival de Spa · Théâtre de Liège",
+        "ko": "서울 소극장 판 · 벨기에 SPA 페스티벌 · 리에주 극장"
+      },
+      "role": {
+        "en": "Stage concept, set design, research director, director",
+        "ko": "무대 컨셉, 판 디자인, 리서치 디렉터, 연출"
+      },
+      "text": {
+        "en": "From 2020 to 2022, Belgian and Korean artists observed their own inner landscapes and linked those experiences to the koans of the Gateless Gate. Visual artists, a sound creator, actors, dancers and a video artist each became both maker and performer. Beauty here was not a norm but an event born from the collision of senses.",
+        "ko": "2020년부터 2022년까지 벨기에와 한국의 예술가들이 각자의 내면 풍경을 관찰하고, 그 경험을 무문관의 공안과 연결해 만든 공연. 시각예술가, 사운드 크리에이터, 배우, 무용수, 비디오 아티스트가 모두 창작자이자 퍼포머가 되었다. 아름다움은 규범이 아니라 감각의 충돌에서 생겨나는 사건이었다."
+      },
+      "images": [
+        "img/sb-clay.jpg",
+        "img/up-1792132248062.jpg",
+        "img/up-1792132255285.jpg",
+        "img/up-1792132280542.jpg",
+        "img/up-1792132283200.jpg"
+      ],
+      "link": "https://youtu.be/J2viJ-Jyztk"
+    },
+    {
+      "title": {
+        "en": "Human Fuga",
+        "ko": "휴먼 푸가"
+      },
+      "year": "2019–2020",
+      "venue": {
+        "en": "Namsan Arts Center, Seoul · Bitgoeul Civic Culture Center, Gwangju",
+        "ko": "남산예술센터 · 광주 빛고을시민문화관"
+      },
+      "role": {
+        "en": "Concept, stage concept, director",
+        "ko": "구성, 무대 컨셉, 연출"
+      },
+      "text": {
+        "en": "A stage work based on Han Kang’s novel Human Acts. After a year of travelling to Gwangju for research, the company found its objects in the archive and turned the novel’s text into 35 metaphorical movements. The actors do not play characters; bodies, objects and sound bear witness in the form of a fugue. Named one of the year’s best three by the Korea Theatre Critics’ Association.",
+        "ko": "한강의 『소년이 온다』를 무대화한 작품. 1년여 동안 광주를 오가며 리서치한 자료에서 오브제를 발견하고, 소설의 텍스트를 35개의 은유적 움직임으로 형상화했다. 배우들은 인물을 연기하지 않고, 몸과 오브제와 소리가 푸가처럼 증언한다. 한국연극평론가협회 올해의 연극 베스트 3 선정."
+      },
+      "images": [
+        "img/fuga-paper.jpg",
+        "img/fuga-light.jpg",
+        "img/up-1792132363240.jpg",
+        "img/up-1792132368668.jpg",
+        "img/up-1792132373861.jpg",
+        "img/up-1792132401375.jpg",
+        "img/up-1792132409956.jpg"
+      ],
+      "link": ""
+    }
+  ],
+  "works": [
+    {
+      "year": "2022 ~2024",
+      "title": {
+        "en": "Landscape, in the dark",
+        "ko": "어둠 속에, 풍경"
+      },
+      "note": {
+        "en": "Creative Guide, Performer, Director· Muddha + Modu Theatre",
+        "ko": "창작가이드, 퍼포머, 연출 · 궁리소묻다 + 모두예술극장"
+      }
+    },
+    {
+      "year": "2024",
+      "title": {
+        "en": "Singularity",
+        "ko": "싱귤래리티"
+      },
+      "note": {
+        "en": "Artistic director, Performer, Participant artists · Muddha + Piknic",
+        "ko": "예술감독, 퍼포머, 참여 예술가 · 궁리소묻다 + 피크닉"
+      }
+    },
+    {
+      "year": "2023",
+      "title": {
+        "en": "The Large, the Small, the Mind",
+        "ko": "우주양자마음"
+      },
+      "note": {
+        "en": "Stage concept, director · Muddha + Sejong Art Center",
+        "ko": "무대 컨셉, 연출 · 궁리소묻다 + 세종문화회관"
+      }
+    },
+    {
+      "year": "2022",
+      "title": {
+        "en": "The Mathematical Body",
+        "ko": "수학하는 몸"
+      },
+      "note": {
+        "en": "Researcher, director · Muddha research project",
+        "ko": "궁리원, 연출 · 궁리소묻다 리서치 프로젝트"
+      }
+    },
+    {
+      "year": "2020 ~2022",
+      "title": {
+        "en": "Strange Beauty",
+        "ko": "스트레인지 뷰티"
+      },
+      "note": {
+        "en": "Director, set design · National Theater Company of Korea + Théâtre de Liège",
+        "ko": "연출, 판 디자인 · 국립극단 + 리에주 극장"
+      }
+    },
+    {
+      "year": "2020 ~2021",
+      "title": {
+        "en": "Tree, Fish, Moon (Changgeuk; Pasori Oper)",
+        "ko": "창극 〈나무, 물고기, 달〉"
+      },
+      "note": {
+        "en": "Writer, director · National Changgeuk Company of Korea",
+        "ko": "작, 연출 · 국립창극단"
+      }
+    },
+    {
+      "year": "2020",
+      "title": {
+        "en": "Hosinsuljeon (pansori theatre)",
+        "ko": "판소리극 〈호신술전〉"
+      },
+      "note": {
+        "en": "Writer, director · Tuida + Taru",
+        "ko": "작, 연출 · 뛰다 + 타루"
+      }
+    },
+    {
+      "year": "2019 ~2020",
+      "title": {
+        "en": "Human Fuga",
+        "ko": "휴먼 푸가"
+      },
+      "note": {
+        "en": "Concept, director · Tuida + Namsan Arts Center",
+        "ko": "구성, 연출 · 뛰다 + 남산예술센터"
+      }
+    },
+    {
+      "year": "2019",
+      "title": {
+        "en": "At Every Different Crossroad",
+        "ko": "다 다른 길.목.에서"
+      },
+      "note": {
+        "en": "Concept, director · National Theater Company of Korea",
+        "ko": "구성, 연출 · 국립극단"
+      }
+    },
+    {
+      "year": "2018",
+      "title": {
+        "en": "A Long Journey to Peace (Potato Classic Concert)",
+        "ko": "감자콘서트 〈평화로 가는 긴 여행〉"
+      },
+      "note": {
+        "en": "Writer, director · Gangwon Cultural Foundation",
+        "ko": "대본, 연출 · 강원문화재단"
+      }
+    },
+    {
+      "year": "2017",
+      "title": {
+        "en": "Fish, Tree, Moon (Indian Production)",
+        "ko": "〈FISH, TREE, MOON〉 인도 제작"
+      },
+      "note": {
+        "en": "Writer, director · Ranga Shankara (India) + InKo Centre",
+        "ko": "대본, 연출 · 인도 랑가샹카라 + 인코센터"
+      }
+    },
+    {
+      "year": "2016",
+      "title": {
+        "en": "Classroom of Poetry",
+        "ko": "시의 교실"
+      },
+      "note": {
+        "en": "Writer, director · Bird Theatre Company, Tottori (Japan) + Tuida",
+        "ko": "대본, 연출 · 일본 돗토리 새의극장 + 뛰다"
+      }
+    },
+    {
+      "year": "2016",
+      "title": {
+        "en": "The Weight of This Sad Age (Project King Lear)",
+        "ko": "프로젝트 킹리어 〈이 슬픈 시대의 무게〉"
+      },
+      "note": {
+        "en": "Writer, director",
+        "ko": "대본, 연출"
+      }
+    },
+    {
+      "year": "2015",
+      "title": {
+        "en": "Land of Wind (Potato Classic Concert)",
+        "ko": "감자콘서트 〈바람나라〉"
+      },
+      "note": {
+        "en": "Writer, director · Gangwon Cultural Foundation",
+        "ko": "대본, 연출 · 강원문화재단"
+      }
+    },
+    {
+      "year": "2014–16",
+      "title": {
+        "en": "Nangcheon Byeolgok (community theatre)",
+        "ko": "커뮤니티 연극 〈낭천별곡〉"
+      },
+      "note": {
+        "en": "Director",
+        "ko": "연출"
+      }
+    },
+    {
+      "year": "2014",
+      "title": {
+        "en": "You Poop and I Poop Fish",
+        "ko": "너는 똥을 누고 나는 물고기를 누었다"
+      },
+      "note": {
+        "en": "Writer, director · National Theater Company of Korea",
+        "ko": "대본, 연출 · 국립극단"
+      }
+    },
+    {
+      "year": "2014",
+      "title": {
+        "en": "Bahucharamata; Beyond Binary",
+        "ko": "바후차라마타; BEYOND BINARY"
+      },
+      "note": {
+        "en": "Writer, director · InKo Centre + Asia Now",
+        "ko": "대본, 연출 · 인코센터 + 아시아나우"
+      }
+    },
+    {
+      "year": "2013",
+      "title": {
+        "en": "Barefoot Land (puppet theatre on peace)",
+        "ko": "평화에 대한 인형극 〈맨발땅〉"
+      },
+      "note": {
+        "en": "Writer, director",
+        "ko": "대본, 연출"
+      }
+    },
+    {
+      "year": "2013",
+      "title": {
+        "en": "Meditation on Pain",
+        "ko": "명상연극 〈고통에 대한 명상〉"
+      },
+      "note": {
+        "en": "Writer, creative guide",
+        "ko": "대본, 크리에이티브 가이드"
+      }
+    },
+    {
+      "year": "2011",
+      "title": {
+        "en": "Old SSong’s Odyssey (nomadic theatre)",
+        "ko": "유목연극 〈쏭노인 퐁당뎐〉"
+      },
+      "note": {
+        "en": "Writer, director · Snuff Puppets (Australia) + Asia Now",
+        "ko": "대본, 연출 · 호주 스너프퍼펫 + 아시아나우"
+      }
+    },
+    {
+      "year": "2010",
+      "title": {
+        "en": "You Can’t Say I Did It (Grotesque Clown Show)",
+        "ko": "광대난장 〈내가 그랬다고 너는 말하지 못한다〉"
+      },
+      "note": {
+        "en": "Writer, director",
+        "ko": "대본, 연출"
+      }
+    },
+    {
+      "year": "2009",
+      "title": {
+        "en": "Alice Project (puppet music theatre)",
+        "ko": "인형음악극 〈앨리스 프로젝트〉"
+      },
+      "note": {
+        "en": "Writer, director",
+        "ko": "대본, 연출"
+      }
+    },
+    {
+      "year": "2007",
+      "title": {
+        "en": "Grandmother’s Shadow Box",
+        "ko": "어린이극 〈할머니의 그림자 상자〉"
+      },
+      "note": {
+        "en": "Writer, director",
+        "ko": "대본, 연출"
+      }
+    },
+    {
+      "year": "2006",
+      "title": {
+        "en": "Shadow, Shadow (shadow theatre)",
+        "ko": "그림자극 〈그림자, 그림자〉"
+      },
+      "note": {
+        "en": "Writer, director",
+        "ko": "대본, 연출"
+      }
+    },
+    {
+      "year": "2005",
+      "title": {
+        "en": "Hamlet Cantabile (puppet music theatre)",
+        "ko": "인형음악극 〈노래하듯이 햄릿〉"
+      },
+      "note": {
+        "en": "Writer, director",
+        "ko": "대본, 연출"
+      }
+    },
+    {
+      "year": "2002",
+      "title": {
+        "en": "Tale of Haruk",
+        "ko": "가족연극 〈하륵이야기〉"
+      },
+      "note": {
+        "en": "Writer, director",
+        "ko": "대본, 연출"
+      }
+    }
+  ],
+  "awards": [
+    {
+      "year": "2021",
+      "text": {
+        "en": "Tree, Fish, Moon — Edaily Culture Awards, Grand Prize in Gugak",
+        "ko": "〈나무, 물고기, 달〉 이데일리 문화대상 국악부문 최우수상"
+      }
+    },
+    {
+      "year": "2020",
+      "text": {
+        "en": "Human Fuga — Korean Theatre Journal, Seven Plays of the Year",
+        "ko": "〈휴먼 푸가〉 한국연극 올해의 연극 7"
+      }
+    },
+    {
+      "year": "2019",
+      "text": {
+        "en": "Human Fuga — Korea Theatre Critics’ Association, Best Three of the Year",
+        "ko": "〈휴먼 푸가〉 한국연극평론가협회 올해의 연극 베스트 3"
+      }
+    },
+    {
+      "year": "2019",
+      "text": {
+        "en": "Yoon Young-sun Theatre Award",
+        "ko": "윤영선 연극상"
+      }
+    },
+    {
+      "year": "2015",
+      "text": {
+        "en": "Tuida — Minister of Culture, Sports and Tourism Award, Outstanding Arts Organization",
+        "ko": "공연창작집단 뛰다, 전국우수예술전문단체 문화체육관광부장관상"
+      }
+    },
+    {
+      "year": "2012",
+      "text": {
+        "en": "Hamlet Cantabile — invited, Young Directors Project, Salzburg",
+        "ko": "〈노래하듯이 햄릿〉 잘츠부르크 뮤직 페스티벌 젊은 연출가 초청"
+      }
+    },
+    {
+      "year": "2009",
+      "text": {
+        "en": "Tale of Haruk — King’s Festival, Veliky Novgorod (Russia), Best Production and Young Critics’ Award",
+        "ko": "〈하륵이야기〉 러시아 노브고로드 King’s Festival 최우수작품상, 젊은 비평가상"
+      }
+    },
+    {
+      "year": "2005",
+      "text": {
+        "en": "Hamlet Cantabile — PAF Award for Direction",
+        "ko": "〈노래하듯이 햄릿〉 PAF 연출상"
+      }
+    },
+    {
+      "year": "2002",
+      "text": {
+        "en": "Tale of Haruk — Seoul Children’s Theatre Awards: Best Production, Script, Acting, Design",
+        "ko": "〈하륵이야기〉 서울어린이연극상 최우수작품상, 극본상, 연기상, 미술상"
+      }
+    }
+  ],
+  "career": [
+    {
+      "year": "2021–",
+      "text": {
+        "en": "Founder and lead researcher, research group Muddha",
+        "ko": "리서치 그룹 궁리소묻다 대표, 책임궁리원"
+      }
+    },
+    {
+      "year": "2019–2023",
+      "text": {
+        "en": "Artistic director, ASSITEJ Korea Winter Festival",
+        "ko": "ASSITEJ Korea 겨울축제 예술감독"
+      }
+    },
+    {
+      "year": "2010–",
+      "text": {
+        "en": "Founder, Tutbat Arts Farm residency, Hwacheon",
+        "ko": "문화공간 예술텃밭 설립 (화천)"
+      }
+    },
+    {
+      "year": "2001–2021",
+      "text": {
+        "en": "Founder and resident director, performance group Tuida",
+        "ko": "공연창작집단 뛰다 대표, 상임연출"
+      }
+    },
+    {
+      "year": "2001",
+      "text": {
+        "en": "MFA in Directing, Korea National University of Arts",
+        "ko": "한국예술종합학교 연극원 연출과 졸업"
+      }
+    },
+    {
+      "year": "1999",
+      "text": {
+        "en": "Puppetry, Ernst Busch Academy of Dramatic Arts, Berlin",
+        "ko": "독일 베를린 에른스트 부쉬 연극학교 인형극과 수학"
+      }
+    },
+    {
+      "year": "1994",
+      "text": {
+        "en": "BA in Physics, POSTECH",
+        "ko": "포항공과대학교 물리학과 졸업"
+      }
+    }
+  ],
+  "teaching": [
+    {
+      "year": "2021–",
+      "text": {
+        "en": "Gungri Academy · Improvisation as practice, movement meditation, psycho-physical improvisation",
+        "ko": "궁리아카데미 · 즉흥수행법, 움직임 명상, 심리와 신체의 즉흥 테크닉"
+      }
+    },
+    {
+      "year": "2021–",
+      "text": {
+        "en": "Red-nose clown improvisation · Orange, Red and Black levels",
+        "ko": "빨간코 광대 즉흥 · Orange, Red, Black 단계"
+      }
+    },
+    {
+      "year": "2021–",
+      "text": {
+        "en": "Puppet and object performance · improvisation with hands, objects and masks",
+        "ko": "인형 연기 훈련 · 손과 오브제, 가면을 이용한 즉흥"
+      }
+    },
+    {
+      "year": "2017",
+      "text": {
+        "en": "Master class “Find Your Energy Inside the Masks” · Adishakti Laboratory for Theatre Arts Research, India",
+        "ko": "마스터 클래스 〈FIND YOUR ENERGY INSIDE THE MASKS〉 · 인도 아디샥티 연극연구소"
+      }
+    }
+  ],
+  "contact": {
+    "email": "jodokjodok@gmail.com",
+    "address": {
+      "en": "Tutbat Arts Farm, Nosinro 274, Hwacheon-eup, Hwacheon-gun, Gangwon-do, South Korea",
+      "ko": "강원도 화천군 화천읍 노신로 274, 문화공간 예술텃밭"
+    },
+    "links": [
+      {
+        "label": {
+          "en": "Muddha",
+          "ko": "궁리소묻다"
+        },
+        "url": "https://muudha.org"
+      }
+    ]
+  }
+}

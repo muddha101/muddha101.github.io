@@ -48,6 +48,13 @@ figcaption{font-size:var(--t-s);color:var(--grey)}
 .track img{flex:0 0 100%;width:100%;max-width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
 .bw .slider:hover img{filter:none}
 .count{font-variant-numeric:tabular-nums}
+.lang{display:flex;gap:.6rem;font-size:var(--t-s);margin-bottom:1.4rem}
+.lang a{text-decoration:none;color:var(--grey)}
+.lang a[aria-current="true"]{color:var(--ink);text-decoration:underline}
+.portrait{width:100%;max-width:10rem;aspect-ratio:4/5;object-fit:cover;display:block}
+.portrait-wrap{position:relative;margin:.8rem 0 .6rem;max-width:10rem}
+.portrait-wrap .del{position:absolute;top:.3rem;right:.3rem}
+.photo-box.portrait-box{aspect-ratio:4/5;max-width:10rem}
 .contact-lines{display:grid;gap:.15rem;margin-top:.6rem}
 
 .phase{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:1rem;position:relative}
@@ -109,6 +116,15 @@ input[type=file]{display:none}
   var saved=null, state=null, editing=false, canEdit=false, artifactApi=null;
   var pendingImages={}, blobUrls={};
   var dirty=false, busy=false, message='', messageErr=false;
+  var lang=location.hash==='#ko'?'ko':'en';
+  function other(){return lang==='ko'?'en':'ko';}
+  var UI={
+    en:{path:'From Tuida to Muddha',works:'Selected Works',chron:'Chronology',awards:'Awards',career:'Positions & Education',teaching:'Teaching',contact:'Contact: ',copy:'copy',copied:'copied',select:'select the address to copy',video:'Video',next:' — click the photo for the next one',title:'BAE Yosup',fail:'The page content could not be loaded. Reload to try again.'},
+    ko:{path:'뛰다에서 묻다로',works:'대표 작업',chron:'작품 연보',awards:'수상',career:'경력 · 학력',teaching:'교육 · 워크숍',contact:'연락: ',copy:'복사',copied:'복사됨',select:'주소를 선택해 복사하세요',video:'영상',next:' — 사진을 누르면 다음 사진으로 넘어갑니다',title:'배요섭',fail:'페이지 내용을 불러오지 못했습니다. 새로고침해 주세요.'}};
+  function u(k){return UI[lang][k];}
+  function loc(){return {en:'',ko:''};}
+  // A text field is either a plain string (shared by both languages) or {en, ko}.
+  function txt(v,l){if(v&&typeof v==='object'){var a=v[l||lang];return a||(l?'':v[other()])||'';}return v||'';}
 
   function clone(o){return JSON.parse(JSON.stringify(o));}
   function get(path){return path.split('.').reduce(function(o,k){return o==null?o:o[k];},state);}
@@ -125,15 +141,17 @@ input[type=file]{display:none}
     return e;
   }
   // Text bound to one field of the data; editable in edit mode.
-  function T(tag,path,cls,ph){
-    var e=h(tag,{class:cls,'data-path':editing?path:null,'data-ph':editing?(ph||'Add text'):null});
-    e.textContent=get(path)||'';
+  function T(tag,path,cls,ph,forceLang){
+    var L=forceLang||lang, v=get(path);
+    var e=h(tag,{class:cls,'data-path':editing?path+(forceLang?':'+forceLang:''):null,'data-ph':editing?(ph||'Add text'):null});
+    e.textContent=(v&&typeof v==='object')?(editing?(v[L]||''):txt(v,forceLang)):(v||'');
     if(editing){
       e.contentEditable='plaintext-only';
       if(e.contentEditable!=='plaintext-only'){e.contentEditable='true';
         e.addEventListener('paste',function(ev){ev.preventDefault();document.execCommand('insertText',false,(ev.clipboardData||window.clipboardData).getData('text'));});}
       e.spellcheck=false;
-      e.addEventListener('input',function(){set(path,e.innerText.replace(/\n$/,''));markDirty();});
+      e.addEventListener('input',function(){var val=e.innerText.replace(/\n$/,''),cur=get(path);
+        if(cur&&typeof cur==='object')cur[L]=val;else set(path,val);markDirty();});
     }
     return e;
   }
@@ -144,13 +162,13 @@ input[type=file]{display:none}
   function unshiftTo(arrPath,item){return function(){get(arrPath).unshift(item);markDirty();render();};}
   function markDirty(){if(!dirty){dirty=true;message='Unsaved changes';messageErr=false;renderBar();}}
 
-  function photoButton(label,onPath,box){
+  function photoButton(label,onPath,box,boxCls){
     var id='file-'+Math.random().toString(36).slice(2);
     var input=h('input',{type:'file',accept:'image/*',id:id});
     input.addEventListener('change',function(){var f=input.files[0];if(!f)return;
       shrink(f).then(function(blob){var p='img/up-'+Date.now()+'.jpg';pendingImages[p]=blob;blobUrls[p]=URL.createObjectURL(blob);onPath(p);markDirty();render();})
       .catch(function(){message='Could not read that image. Try a JPG or PNG.';messageErr=true;renderBar();});});
-    return h('span',{class:'ed'+(box?' photo-slot':'')},input,h('label',{for:id,class:'add'+(box?' photo-box':''),style:'display:inline-flex'},'+ '+label));
+    return h('span',{class:'ed'+(box?' photo-slot':'')},input,h('label',{for:id,class:'add'+(box?' photo-box '+(boxCls||''):''),style:'display:inline-flex'},'+ '+label));
   }
   function shrink(file){
     return new Promise(function(res,rej){var img=new Image(),url=URL.createObjectURL(file);
@@ -163,48 +181,53 @@ input[type=file]{display:none}
   // ---------- the sheet ----------
   function bio(){
     var p=state.profile, c=state.contact;
-    var copyBtn=h('button',{class:'ghost',type:'button'},'copy');
+    var copyBtn=h('button',{class:'ghost',type:'button'},u('copy'));
     copyBtn.addEventListener('click',function(){
-      try{navigator.clipboard.writeText(c.email).then(function(){copyBtn.textContent='copied';setTimeout(function(){copyBtn.textContent='copy';},1500);},function(){copyBtn.textContent='select the address to copy';});}
-      catch(e){copyBtn.textContent='select the address to copy';}});
+      try{navigator.clipboard.writeText(c.email).then(function(){copyBtn.textContent=u('copied');setTimeout(function(){copyBtn.textContent=u('copy');},1500);},function(){copyBtn.textContent=u('select');});}
+      catch(e){copyBtn.textContent=u('select');}});
+    var portrait=p.portrait?h('div',{class:'portrait-wrap bw'},h('img',{class:'portrait',src:src(p.portrait),alt:(lang==='ko'?p.nameKo:p.nameEn)}),del(function(){p.portrait='';markDirty();render();},'Remove portrait')):null;
     return h('div',{class:'row'},
-      h('div',{class:'c1'},T('h1','profile.nameEn'),T('p','profile.nameKo','muted'),T('p','profile.roles','muted'),T('p','profile.location','muted')),
+      h('div',{class:'c1'},
+        h('nav',{class:'lang','aria-label':'Language'},h('a',{href:'#en','aria-current':lang==='en'?'true':null,lang:'en'},'EN'),h('a',{href:'#ko','aria-current':lang==='ko'?'true':null,lang:'ko'},'한국어')),
+        T('h1',lang==='ko'?'profile.nameKo':'profile.nameEn'),T('p',lang==='ko'?'profile.nameEn':'profile.nameKo','muted'),
+        portrait,
+        editing?photoButton(p.portrait?'Replace portrait':'Add portrait',function(x){p.portrait=x;},!p.portrait,'portrait-box'):null,
+        T('p','profile.roles','muted'),T('p','profile.location','muted')),
       h('div',{class:'c2'},
         T('p','profile.intro','pre'),
         T('div','statement','pre'),
         h('div',{class:'contact-lines'},
-          h('p',null,'Contact: ',editing?T('span','contact.email'):h('span',null,c.email,' '),editing?null:copyBtn),
+          h('p',null,u('contact'),editing?T('span','contact.email'):h('span',null,c.email,' '),editing?null:copyBtn),
           T('p','contact.address','muted'),
           editing?h('div',{class:'field'},c.links.map(function(_,i){return h('div',null,T('span','contact.links.'+i+'.label',null,'Link name'),T('span','contact.links.'+i+'.url',null,'https://…'));})):
-            c.links.map(function(l){return h('p',null,h('a',{href:l.url,target:'_blank',rel:'noopener'},l.label));}))),
+            c.links.map(function(l){return h('p',null,h('a',{href:l.url,target:'_blank',rel:'noopener'},txt(l.label)));}))),
       h('div',{class:'c3'},
-        h('figure',{class:'bw'},p.heroImage?h('img',{class:'hero-img',src:src(p.heroImage),alt:p.heroCaption||'Performance photograph'}):null),
+        h('figure',{class:'bw'},p.heroImage?h('img',{class:'hero-img',src:src(p.heroImage),alt:txt(p.heroCaption)||'Performance photograph'}):null),
         T('figcaption','profile.heroCaption',null,'Photo caption'),
         editing?photoButton('Replace main photo',function(x){state.profile.heroImage=x;}):null));
   }
 
   function path(){
     return h('div',{class:'row'},
-      h('div',{class:'c1'},h('h2',null,'From Tuida to Muddha')),
+      h('div',{class:'c1'},h('h2',null,u('path'))),
       h('div',{class:'c2'},state.phases.map(function(_,i){var b='phases.'+i+'.';
           return h('div',{class:'phase'},T('span',b+'years','y','Years'),h('div',null,T('h3',b+'name',null,'Name'),T('p',b+'subtitle','sub','Subtitle'),T('p',b+'text','muted','Text')),del(removeAt('phases',i),'Remove this period'));}),
-        add('Add period',pushTo('phases',{years:'',name:'',subtitle:'',text:''}))),
+        add('Add period',function(){state.phases.push({years:'',name:loc(),subtitle:loc(),text:loc()});markDirty();render();})),
       h('div',{class:'c3'}));
   }
 
   function works(){
-    var blank={title:'',titleEn:'',year:'',venue:'',role:'',text:'',images:[],link:''};
     return [
-      h('div',{class:'row label'},h('div',{class:'c1'},h('h2',null,'Selected Works')),h('div',{class:'c2'},add('Add new work here',addWork)),h('div',{class:'c3'}))
+      h('div',{class:'row label'},h('div',{class:'c1'},h('h2',null,u('works'))),h('div',{class:'c2'},add('Add new work here',addWork)),h('div',{class:'c3'}))
     ].concat(state.featured.map(function(w,i){var b='featured.'+i+'.';
       var first=w.images[0], rest=w.images.slice(1);
-      function fig(im,j,cls){return h('figure',null,h('img',{class:cls,src:src(im),alt:(w.title||'Work')+' — photo '+(j+1),loading:'lazy'}),del(function(){w.images.splice(j,1);markDirty();render();},'Remove photo'));}
+      function fig(im,j,cls){return h('figure',null,h('img',{class:cls,src:src(im),alt:(txt(w.title)||'Work')+' — photo '+(j+1),loading:'lazy'}),del(function(){w.images.splice(j,1);markDirty();render();},'Remove photo'));}
       return h('div',{class:'row'},
-        h('div',{class:'c1'},T('h3',b+'title',null,'Title'),T('p',b+'year',null,'Year'),T('p',b+'titleEn','muted','Other-language title'),T('p',b+'venue','muted','Venue'),del(removeAt('featured',i),'Remove this work')),
+        h('div',{class:'c1'},T('h3',b+'title',null,lang==='ko'?'제목':'Title'),T('p',b+'year',null,'Year'),T('p',b+'title','muted',lang==='ko'?'English title':'한국어 제목',other()),T('p',b+'venue','muted','Venue'),del(removeAt('featured',i),'Remove this work')),
         h('div',{class:'c2'},
           T('p',b+'text','pre','Description'),
           T('p',b+'role','muted','Role'),
-          w.link&&!editing?h('p',null,h('a',{href:w.link,target:'_blank',rel:'noopener'},'Video')):null,
+          w.link&&!editing?h('p',null,h('a',{href:w.link,target:'_blank',rel:'noopener'},u('video'))):null,
           h('div',{class:'field'},'Video link',T('span',b+'link',null,'https://…'))),
         h('div',{class:'c3 bw'},
           editing?(first?fig(first,0,'work-img'):null):slider(w),
@@ -217,15 +240,15 @@ input[type=file]{display:none}
   function slider(w){
     var imgs=w.images, n=imgs.length;
     if(!n)return null;
-    var alt=function(j){return (w.title||'Work')+' — photo '+(j+1)+' of '+n;};
+    var alt=function(j){return (txt(w.title)||'Work')+' — photo '+(j+1)+' of '+n;};
     if(n===1)return h('figure',null,h('img',{class:'work-img',src:src(imgs[0]),alt:alt(0),loading:'lazy'}));
     var i=0;
     var track=h('div',{class:'track'},imgs.map(function(im,j){return h('img',{src:src(im),alt:alt(j)});}));
     var count=h('span',{class:'count'},'1 / '+n);
-    var box=h('button',{class:'slider',type:'button','aria-label':'Show next photo of '+(w.title||'this work')},track);
+    var box=h('button',{class:'slider',type:'button','aria-label':'Show next photo of '+(txt(w.title)||'this work')},track);
     box.addEventListener('click',function(){
       i=(i+1)%n;track.style.transform='translateX('+(-100*i)+'%)';count.textContent=(i+1)+' / '+n;});
-    return h('figure',null,box,h('figcaption',null,count,' — click the photo for the next one'));
+    return h('figure',null,box,h('figcaption',null,count,u('next')));
   }
 
   function listRow(title,arr,cols,blank,wide){
@@ -234,16 +257,16 @@ input[type=file]{display:none}
       h('div',{class:'c2',style:wide?'grid-column:2 / -1':null},
         h('ol',{class:'list'+(wide?' wide':'')},state[arr].map(function(_,i){var b=arr+'.'+i+'.';
           return h('li',null,cols.map(function(c){return T('span',b+c[0],c[1],c[2]);}),del(removeAt(arr,i)));})),
-        add('Add at top',unshiftTo(arr,blank))),
+        add('Add at top',function(){state[arr].unshift(blank());markDirty();render();})),
       wide?null:h('div',{class:'c3'}));
   }
 
   function sheet(){
     return [bio(),path()].concat(works(),[
-      listRow('Chronology','works',[['year','y','Year'],['title',null,'Title'],['note','note','Role · producer']],{year:'',title:'',note:''},true),
-      listRow('Awards','awards',[['year','y','Year'],['text',null,'Award']],{year:'',text:''}),
-      listRow('Positions & Education','career',[['year','y','Year'],['text',null,'Text']],{year:'',text:''}),
-      listRow('Teaching','teaching',[['year','y','Year'],['text',null,'Text']],{year:'',text:''})
+      listRow(u('chron'),'works',[['year','y','Year'],['title',null,'Title'],['note','note','Role · producer']],function(){return {year:'',title:loc(),note:loc()};},true),
+      listRow(u('awards'),'awards',[['year','y','Year'],['text',null,'Award']],function(){return {year:'',text:loc()};}),
+      listRow(u('career'),'career',[['year','y','Year'],['text',null,'Text']],function(){return {year:'',text:loc()};}),
+      listRow(u('teaching'),'teaching',[['year','y','Year'],['text',null,'Text']],function(){return {year:'',text:loc()};})
     ]);
   }
 
@@ -261,6 +284,7 @@ input[type=file]{display:none}
   window.addEventListener('scroll',onScroll,{passive:true});
 
   function render(){
+    document.documentElement.lang=lang;document.title=u('title');
     var rel=loopH?((window.scrollY%loopH)+loopH)%loopH:window.scrollY;
     if(ro){ro.disconnect();ro=null;}
     root.innerHTML='';
@@ -300,7 +324,7 @@ input[type=file]{display:none}
   }
   // Adds an empty work (top by default), opens edit mode and puts the cursor in its title.
   function addWork(atEnd){
-    var blank={title:'',titleEn:'',year:'',venue:'',role:'',text:'',images:[],link:''};
+    var blank={title:loc(),year:'',venue:loc(),role:loc(),text:loc(),images:[],link:''};
     if(!editing){editing=true;document.body.classList.add('editing');}
     if(atEnd)state.featured.push(blank);else state.featured.unshift(blank);
     message='New work added. Fill in the title, text and photo.';messageErr=false;dirty=true;
@@ -330,9 +354,14 @@ input[type=file]{display:none}
     });
   }
 
+  window.addEventListener('hashchange',function(){
+    var l=location.hash==='#ko'?'ko':(location.hash==='#en'||location.hash===''?'en':null);
+    if(!l||l===lang||!state)return;lang=l;render();window.scrollTo(0,loopH);
+  });
+
   fetch('data/site.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();})
     .then(function(d){saved=d;state=clone(d);render();})
-    .catch(function(){root.innerHTML='';root.appendChild(h('div',{class:'sheet'},h('p',{class:'loading'},'The page content could not be loaded. Reload to try again.')));});
+    .catch(function(){root.innerHTML='';root.appendChild(h('div',{class:'sheet'},h('p',{class:'loading'},u('fail'))));});
 
   if(window.claude&&window.claude.use){
     Promise.all([window.claude.use('artifact'),window.claude.use('user')]).then(function(r){

@@ -55,6 +55,10 @@ figcaption{font-size:var(--t-s);color:var(--grey)}
 .portrait-wrap{position:relative;margin:.8rem 0 .6rem;max-width:10rem}
 .portrait-wrap .del{position:absolute;top:.3rem;right:.3rem}
 .photo-box.portrait-box{aspect-ratio:4/5;max-width:10rem}
+.more{font-size:var(--t-s);margin-top:.15rem}
+.back{font-size:var(--t-s);color:var(--grey)}
+.page-title{font-size:var(--t-m);font-weight:500}
+.page-lead{font-size:var(--t-m);line-height:1.5}
 .contact-lines{display:grid;gap:.15rem;margin-top:.6rem}
 
 .phase{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:1rem;position:relative}
@@ -116,11 +120,16 @@ input[type=file]{display:none}
   var saved=null, state=null, editing=false, canEdit=false, artifactApi=null;
   var pendingImages={}, blobUrls={};
   var dirty=false, busy=false, message='', messageErr=false;
-  var lang=location.hash==='#ko'?'ko':'en';
+  // Address: #en / #ko for the main page, #tuida / #tuida-ko / #muddha / #muddha-ko for the two group pages.
+  var PAGES=['tuida','muddha'];
+  function parseHash(){var x=location.hash.slice(1),m=/^(tuida|muddha)(-ko)?$/.exec(x);
+    if(m)return {page:m[1],lang:m[2]?'ko':'en'};return {page:'',lang:x==='ko'?'ko':'en'};}
+  function hashFor(l,pg){return '#'+(pg?pg+(l==='ko'?'-ko':''):l);}
+  var view=parseHash(), lang=view.lang;
   function other(){return lang==='ko'?'en':'ko';}
   var UI={
-    en:{path:'From Tuida to Muddha',works:'Selected Works',chron:'Chronology',awards:'Awards',career:'Positions & Education',teaching:'Teaching',contact:'Contact: ',copy:'copy',copied:'copied',select:'select the address to copy',video:'Video',next:' — click the photo for the next one',title:'BAE Yosup',fail:'The page content could not be loaded. Reload to try again.'},
-    ko:{path:'뛰다에서 묻다로',works:'대표 작업',chron:'작품 연보',awards:'수상',career:'경력 · 학력',teaching:'교육 · 워크숍',contact:'연락: ',copy:'복사',copied:'복사됨',select:'주소를 선택해 복사하세요',video:'영상',next:' — 사진을 누르면 다음 사진으로 넘어갑니다',title:'배요섭',fail:'페이지 내용을 불러오지 못했습니다. 새로고침해 주세요.'}};
+    en:{more:'Read more →',back:'← BAE Yosup',section:'Add section',path:'From Tuida to Muddha',works:'Selected Works',chron:'Chronology',awards:'Awards',career:'Positions & Education',teaching:'Teaching',contact:'Contact: ',copy:'copy',copied:'copied',select:'select the address to copy',video:'Video',next:' — click the photo for the next one',title:'BAE Yosup',fail:'The page content could not be loaded. Reload to try again.'},
+    ko:{more:'자세히 보기 →',back:'← 배요섭',section:'항목 추가',path:'뛰다에서 묻다로',works:'대표 작업',chron:'작품 연보',awards:'수상',career:'경력 · 학력',teaching:'교육 · 워크숍',contact:'연락: ',copy:'복사',copied:'복사됨',select:'주소를 선택해 복사하세요',video:'영상',next:' — 사진을 누르면 다음 사진으로 넘어갑니다',title:'배요섭',fail:'페이지 내용을 불러오지 못했습니다. 새로고침해 주세요.'}};
   function u(k){return UI[lang][k];}
   function loc(){return {en:'',ko:''};}
   // A text field is either a plain string (shared by both languages) or {en, ko}.
@@ -178,6 +187,12 @@ input[type=file]{display:none}
       img.onerror=function(){URL.revokeObjectURL(url);rej();};img.src=url;});
   }
 
+  function langNav(){
+    return h('nav',{class:'lang','aria-label':'Language'},
+      h('a',{href:hashFor('en',view.page),'aria-current':lang==='en'?'true':null,lang:'en'},'EN'),
+      h('a',{href:hashFor('ko',view.page),'aria-current':lang==='ko'?'true':null,lang:'ko'},'한국어'));
+  }
+
   // ---------- the sheet ----------
   function bio(){
     var p=state.profile, c=state.contact;
@@ -188,7 +203,7 @@ input[type=file]{display:none}
     var portrait=p.portrait?h('div',{class:'portrait-wrap bw'},h('img',{class:'portrait',src:src(p.portrait),alt:(lang==='ko'?p.nameKo:p.nameEn)}),del(function(){p.portrait='';markDirty();render();},'Remove portrait')):null;
     return h('div',{class:'row'},
       h('div',{class:'c1'},
-        h('nav',{class:'lang','aria-label':'Language'},h('a',{href:'#en','aria-current':lang==='en'?'true':null,lang:'en'},'EN'),h('a',{href:'#ko','aria-current':lang==='ko'?'true':null,lang:'ko'},'한국어')),
+        langNav(),
         T('h1',lang==='ko'?'profile.nameKo':'profile.nameEn'),T('p',lang==='ko'?'profile.nameEn':'profile.nameKo','muted'),
         portrait,
         editing?photoButton(p.portrait?'Replace portrait':'Add portrait',function(x){p.portrait=x;},!p.portrait,'portrait-box'):null,
@@ -211,7 +226,7 @@ input[type=file]{display:none}
     return h('div',{class:'row'},
       h('div',{class:'c1'},h('h2',null,u('path'))),
       h('div',{class:'c2'},state.phases.map(function(_,i){var b='phases.'+i+'.';
-          return h('div',{class:'phase'},T('span',b+'years','y','Years'),h('div',null,T('h3',b+'name',null,'Name'),T('p',b+'subtitle','sub','Subtitle'),T('p',b+'text','muted','Text')),del(removeAt('phases',i),'Remove this period'));}),
+          return h('div',{class:'phase'},T('span',b+'years','y','Years'),h('div',null,T('h3',b+'name',null,'Name'),T('p',b+'subtitle','sub','Subtitle'),T('p',b+'text','muted','Text'),state.phases[i].page&&state.pages&&state.pages[state.phases[i].page]?h('p',{class:'more'},h('a',{href:hashFor(lang,state.phases[i].page)},u('more'))):null),del(removeAt('phases',i),'Remove this period'));}),
         add('Add period',function(){state.phases.push({years:'',name:loc(),subtitle:loc(),text:loc()});markDirty();render();})),
       h('div',{class:'c3'}));
   }
@@ -251,6 +266,35 @@ input[type=file]{display:none}
     return h('figure',null,box,h('figcaption',null,count,u('next')));
   }
 
+  // Photos for any item with an images list: a click-to-slide viewer, or thumbnails with add/remove in edit mode.
+  function gallery(o,title){
+    var first=o.images[0], rest=o.images.slice(1);
+    function fig(im,j,cls){return h('figure',null,h('img',{class:cls,src:src(im),alt:(title||'Photo')+' — '+(j+1),loading:'lazy'}),del(function(){o.images.splice(j,1);markDirty();render();},'Remove photo'));}
+    if(!editing)return slider({images:o.images,title:title});
+    return [first?fig(first,0,'work-img'):null,
+      rest.length?h('div',{class:'thumbs'},rest.map(function(im,k){return fig(im,k+1);})):null,
+      photoButton(o.images.length?'Add another photo':'Add photo',function(x){o.images.push(x);},!o.images.length)];
+  }
+
+  function groupPage(key){
+    var pg=state.pages[key], b='pages.'+key+'.';
+    var main=hashFor(lang,'');
+    var rows=[
+      h('div',{class:'row'},
+        h('div',{class:'c1'},langNav(),h('p',null,h('a',{class:'back',href:main},u('back')))),
+        h('div',{class:'c2'},T('h1',b+'title','page-title','Title'),T('p',b+'years','muted','Years'),T('div',b+'lead','page-lead pre','Introduction')),
+        h('div',{class:'c3'}))
+    ].concat(pg.sections.map(function(s,i){var sb=b+'sections.'+i+'.';
+      return h('div',{class:'row'},
+        h('div',{class:'c1'},T('p',sb+'years','muted','Years'),T('h2',sb+'heading',null,'Heading'),del(function(){pg.sections.splice(i,1);markDirty();render();},'Remove this section')),
+        h('div',{class:'c2'},T('p',sb+'text','pre','Text')),
+        h('div',{class:'c3 bw'},gallery(s,txt(s.heading))));
+    }));
+    rows.push(h('div',{class:'row'},h('div',{class:'c1'},h('p',null,h('a',{class:'back',href:main},u('back')))),
+      h('div',{class:'c2'},add(u('section'),function(){pg.sections.push({years:'',heading:loc(),text:loc(),images:[]});markDirty();render();})),h('div',{class:'c3'})));
+    return rows;
+  }
+
   function listRow(title,arr,cols,blank,wide){
     return h('div',{class:'row'},
       h('div',{class:'c1'},h('h2',null,title)),
@@ -284,11 +328,17 @@ input[type=file]{display:none}
   window.addEventListener('scroll',onScroll,{passive:true});
 
   function render(){
-    document.documentElement.lang=lang;document.title=u('title');
+    document.documentElement.lang=lang;
+    var gp=view.page&&state.pages&&state.pages[view.page]?view.page:'';
+    document.title=gp?txt(state.pages[gp].title)+' — '+u('title'):u('title');
     var rel=loopH?((window.scrollY%loopH)+loopH)%loopH:window.scrollY;
     if(ro){ro.disconnect();ro=null;}
     root.innerHTML='';
-    if(editing){
+    if(gp){
+      loopH=0;var y=window.scrollY;
+      root.appendChild(h('div',{class:'sheet'},groupPage(gp)));
+      window.scrollTo(0,y);
+    }else if(editing){
       root.appendChild(h('div',{class:'sheet'},sheet()));
       window.scrollTo(0,rel);loopH=0;
     }else{
@@ -325,6 +375,7 @@ input[type=file]{display:none}
   // Adds an empty work (top by default), opens edit mode and puts the cursor in its title.
   function addWork(atEnd){
     var blank={title:loc(),year:'',venue:loc(),role:loc(),text:loc(),images:[],link:''};
+    if(view.page){view={page:'',lang:lang};loopH=0;location.hash=hashFor(lang,'');}
     if(!editing){editing=true;document.body.classList.add('editing');}
     if(atEnd)state.featured.push(blank);else state.featured.unshift(blank);
     message='New work added. Fill in the title, text and photo.';messageErr=false;dirty=true;
@@ -355,8 +406,13 @@ input[type=file]{display:none}
   }
 
   window.addEventListener('hashchange',function(){
-    var l=location.hash==='#ko'?'ko':(location.hash==='#en'||location.hash===''?'en':null);
-    if(!l||l===lang||!state)return;lang=l;render();window.scrollTo(0,loopH);
+    var nv=parseHash();
+    if(!state||(nv.page===view.page&&nv.lang===lang))return;
+    var pageChanged=nv.page!==view.page;
+    view=nv;lang=nv.lang;
+    if(pageChanged){loopH=0;window.scrollTo(0,0);}
+    render();
+    if(!view.page&&!editing)window.scrollTo(0,loopH);
   });
 
   fetch('data/site.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();})

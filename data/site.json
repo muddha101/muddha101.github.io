@@ -2,7 +2,7 @@
   "profile": {
     "nameEn": "BAE Yosup",
     "nameKo": "배요섭",
-    "portrait": "",
+    "portrait": "img/up-1792137926465.jpg",
     "roles": {
       "en": "Director · Performer · Writer · Researcher",
       "ko": "연출가 · 퍼포머 · 작가 · 연구자"
@@ -53,8 +53,9 @@
       },
       "text": {
         "en": "With performance group Tuida (Korean for “to run, to leap, the heart beats”) he built a polyphonic stage language of bodies, objects, puppets, masks and live music. In 2010 the group moved to a closed rural school in Hwacheon and founded Tutbat Arts Farm, folding daily life into creation. Its final period turned toward theatre as testimony to historical pain.",
-        "ko": "‘뛰다’는 달리다, 도약하다, 심장이 뛰다라는 뜻이다. 몸, 오브제, 인형, 가면, 라이브 음악이 얽히는 다성적 무대 언어를 만들었다. 2010년 화천의 폐교로 이주해 예술텃밭을 열고 생활과 창작을 포갰으며, 마지막 시기에는 역사적 고통을 증언하는 연극으로 나아갔다."
-      }
+        "ko": "공연창작집단 **뛰다**는 2001년, 여덟 명의 젊은 예술가들이 모여 “열린 연극, 자연친화적 연극, 움직이는 연극”이라는 세 가지 지향을 내걸며 출발했다. 이들은 연극을 단순히 무대 위에서 이야기를 재현하는 장르로 보지 않고, 배우의 몸과 소리, 그리고 인형과 오브제, 가면과 음악이 서로 교차하며 살아 움직이는 “다성적 무대 언어”로 확장하려 했다. 결성 이후 20년 동안 뛰다는 이러한 미학적 실험을 꾸준히 이어가면서, 한국 공연예술계에서 실험성과 공동체성을 동시에 지닌 보기 드문 집단으로 자리매김했다.\n\n뛰다의 이름은 곧 “움직임”과 “도약”을 상징한다. 이들의 연극은 항상 정지하지 않고, 끊임없이 이동하고 변화하며, 관객의 감각을 흔들고 질문을 던지는 방식으로 존재했다. 초기에는 인형과 오브제, 가면, 음악을 통해 무대와 관객 사이의 경계를 허물었고, 이후에는 화천으로의 이주를 통해 생활과 창작을 하나로 포개며 “예술이 삶이 되는 방식”을 실험했다. 마지막 시기에는 사회적 고통과 역사적 기억을 무대 위에서 증언하는 연극으로 발전하여, 폴리포니와 푸가적 구조 속에서 예술이 가질 수 있는 증언의 힘을 탐구했다."
+      },
+      "page": "tuida"
     },
     {
       "years": "2021–",
@@ -68,8 +69,9 @@
       },
       "text": {
         "en": "Muddha (묻다, “to ask”) tests whether the research process itself can become the work. It asks what a body is, where consciousness comes from, and how the senses compose a world.",
-        "ko": "‘묻다’는 질문한다는 뜻이다. 리서치의 결과가 아니라 과정 자체가 작품이 될 수 있는지를 실험한다. 몸은 무엇인가, 의식은 어디에서 오는가, 감각은 세계를 어떻게 구성하는가를 묻는다."
-      }
+        "ko": "궁리소묻다는 이름 그대로, “묻고, 묻고, 또 묻는다”는 태도를 기반으로 연구하고 실험하면서 새로운 길을 모색하는 콜렉티브 성격의 리서치그룹이다. 여기서의 질문은 단순히 주제를 정하는 것이 아니라, 몸과 사물, 인간과 비인간, 감각과 세계 사이에 어떤 관계가 가능한가를 탐색하는 과정이다. 리서치의 결과가 아니라 과정 자체가 작품이 될 수 있는지를 실험한다. 몸은 무엇인가, 의식은 어디에서 오는가, 감각은 세계를 어떻게 구성하는가를 묻는다."
+      },
+      "page": "muddha"
     }
   ],
   "featured": [
@@ -652,5 +654,189 @@
         "url": "https://muudha.org"
       }
     ]
+  },
+  "pages": {
+    "tuida": {
+      "title": {
+        "en": "Performance Group Tuida",
+        "ko": "공연창작집단 뛰다"
+      },
+      "years": "2001–2020",
+      "lead": {
+        "en": "Performance Group Tuida began in 2001 when eight young artists came together around three aims: open theatre, nature-friendly theatre and moving theatre. Rather than treating theatre as the re-enactment of a story on stage, they set out to build a polyphonic stage language in which the actor's body and voice, puppets and objects, masks and music cross and come alive.\n\n“Tuida” means to run, to leap, the beating of the heart. Its theatre never stood still. It kept moving and changing, unsettling the audience's senses and putting questions to them. Over twenty years Tuida became a rare company in Korean performing arts, at once experimental and communal.",
+        "ko": "공연창작집단 뛰다는 2001년, 여덟 명의 젊은 예술가들이 모여 “열린 연극, 자연친화적 연극, 움직이는 연극”이라는 세 가지 지향을 내걸며 출발했다. 연극을 무대 위에서 이야기를 재현하는 장르로 보지 않고, 배우의 몸과 소리, 인형과 오브제, 가면과 음악이 교차하며 살아 움직이는 다성적 무대 언어로 넓히려 했다.\n\n‘뛰다’는 달리다, 도약하다, 심장이 뛰다라는 뜻이다. 뛰다의 연극은 멈추지 않고 끊임없이 이동하고 변화하며, 관객의 감각을 흔들고 질문을 던졌다. 20년 동안 뛰다는 한국 공연예술계에서 실험성과 공동체성을 함께 지닌 보기 드문 집단으로 자리매김했다."
+      },
+      "sections": [
+        {
+          "years": "2001–2004",
+          "heading": {
+            "en": "Building a language of body, object and music",
+            "ko": "몸–오브제–음악의 언어를 세우다"
+          },
+          "text": {
+            "en": "In its early years Tuida concentrated on founding a new theatrical language. Grounded in the actors' physical training, it combined objects, puppets, masks and live music into a threefold structure where the visible body, tangible matter and resonant sound meet. Its founding work, Tale of Haruk, was open to children and families, yet went beyond puppet theatre: actors and objects lent each other life.",
+            "ko": "창단 초기의 뛰다는 새로운 연극 언어를 세우는 데 힘을 쏟았다. 배우의 신체 훈련을 바탕으로 오브제와 인형, 가면, 현장 음악을 결합해 보이는 몸, 만져지는 물성, 울리는 소리가 교차하는 삼중 구조를 만들었다. 창단작 〈하륵이야기〉는 어린이와 가족 관객에게도 열려 있었지만, 단순한 인형극을 넘어 배우와 오브제가 서로에게 생명력을 불어넣는 실험이었다."
+          },
+          "images": []
+        },
+        {
+          "years": "2005–2009",
+          "heading": {
+            "en": "Classics meet the present",
+            "ko": "고전과 동시대의 접속"
+          },
+          "text": {
+            "en": "Hamlet Cantabile (2005) was Tuida's turning point and signature work. Instead of staging Shakespeare as narrative drama, it took the play apart and reassembled it around the actors' bodies and musical rhythm, a stage that flows as if sung. Touring abroad, it made Tuida known internationally. Shadow, Shadow (2006) and Alice Project (2009) pushed visual experiment further with images and shadows, and began to confront the violence and disasters of contemporary society.",
+            "ko": "2005년의 〈노래하듯이 햄릿〉은 뛰다의 전환점이자 대표작이다. 셰익스피어의 고전을 서사극으로 재현하는 대신, 배우의 몸과 음악적 리듬을 중심으로 해체하고 다시 짜서 노래하듯 흘러가는 무대로 바꾸었다. 이 작품은 해외 투어로 이어지며 뛰다의 이름을 국제적으로 알렸다. 〈그림자, 그림자〉(2006)와 〈앨리스 프로젝트〉(2009)에서는 이미지와 그림자로 시각적 실험을 넓히며, 동시대 사회의 폭력과 참사를 본격적으로 다루기 시작했다."
+          },
+          "images": []
+        },
+        {
+          "years": "2010–2014",
+          "heading": {
+            "en": "Hwacheon: living and making as one",
+            "ko": "화천 이주, 생활과 창작의 통합"
+          },
+          "text": {
+            "en": "In 2010 Tuida left Seoul for a closed rural school in Hwacheon, Gangwon-do, and began a long-term project joining life and creation under the name Tutbat Arts Farm. The school became a communal place for living, rehearsing, performing, teaching and village festivals. You Can't Say I Did It (2010), linking Macbeth to the violence of the modern state, was the peak of its clown method. Exchanges with Indian artists produced Meditation on Pain (2012) and Bahucharamata; Beyond Binary (2014). With Australia's Snuff Puppets it made the nomadic street theatre Old Ssong's Odyssey (2011), building puppets together with citizens.",
+            "ko": "2010년 뛰다는 서울을 떠나 강원도 화천의 폐교(옛 신명분교)로 거처를 옮기고, ‘예술텃밭’이라는 이름으로 창작과 생활을 잇는 긴 프로젝트를 시작했다. 폐교는 거주와 연습, 공연, 워크숍, 마을 축제가 함께 이루어지는 공동체의 공간이 되었다. 맥베스와 현대 국가의 폭력을 잇는 〈내가 그랬다고 너는 말하지 못한다〉(2010)는 광대 메소드의 정점이었고, 인도 예술가들과의 교류에서 〈고통에 대한 명상〉(2012)과 〈바후차라마타; beyond binary〉(2014)가 태어났다. 호주 스너프 퍼펫과 만든 유목연극 〈쏭노인 퐁당뎐〉(2011)은 시민과 함께 인형을 만들고 거리를 무대로 삼았다."
+          },
+          "images": []
+        },
+        {
+          "years": "2015–2020",
+          "heading": {
+            "en": "Theatre of testimony, an aesthetics of polyphony",
+            "ko": "증언의 연극, 폴리포니의 미학"
+          },
+          "text": {
+            "en": "From 2015 Tuida widened its international co-creations and turned toward theatre that bears witness to contemporary tragedy and historical wounds. Classroom of Poetry (2015–16), with Japan's Bird Theatre Company, mediated the gap between Korean and Japanese memories of history. The Weight of This Sad Age (2016) crossed a social disaster with King Lear. Its last work, Human Fuga (2019–20), staged Han Kang's Human Acts in the form of a fugue. The actors did not play characters. Through 35 physical actions and small objects such as glass bottles, white powder, cotton cloth and ballpoint pens, they wove the sensation of pain. Audiences said they had not watched a show but taken part in a rite of mourning.",
+            "ko": "2015년 이후 뛰다는 국제 공동창작을 넓히며 동시대의 비극과 역사적 상처를 증언하는 연극으로 나아갔다. 일본 새의극장과 함께한 〈시의 교실〉(2015–16)은 한일 간 역사 인식의 차이를 예술로 매개했고, 〈이 슬픈 시대의 무게〉(2016)는 사회적 참사와 리어왕을 교차시켰다. 마지막 작품 〈휴먼 푸가〉(2019–20)는 한강의 『소년이 온다』를 푸가의 형식으로 풀어낸 무대다. 배우들은 인물을 연기하지 않았다. 35개의 신체 동작과 유리병, 흰 가루, 소창, 볼펜 같은 사소한 오브제로 고통의 감각을 짜 나갔다. 관객들은 공연을 본 것이 아니라 함께 애도의 의식에 참여했다고 말했다."
+          },
+          "images": [
+            "img/fuga-paper.jpg",
+            "img/fuga-light.jpg",
+            "img/up-1792132363240.jpg",
+            "img/up-1792132368668.jpg",
+            "img/up-1792132373861.jpg",
+            "img/up-1792132401375.jpg",
+            "img/up-1792132409956.jpg"
+          ]
+        },
+        {
+          "years": "",
+          "heading": {
+            "en": "What remains",
+            "ko": "뛰다가 남긴 것"
+          },
+          "text": {
+            "en": "Tuida's twenty years were not a list of productions but a process in which art and life, community and world, pain and testimony became entangled. Its path remains an example of how contemporary Korean art can speak with the world.",
+            "ko": "뛰다의 20년은 작품의 나열이 아니라 예술과 삶, 공동체와 세계, 고통과 증언이 서로 얽히는 과정이었다. 그 궤적은 한국 동시대 예술이 세계와 어떻게 대화할 수 있는지를 보여주는 사례로 남는다."
+          },
+          "images": []
+        }
+      ]
+    },
+    "muddha": {
+      "title": {
+        "en": "Research Group Muddha",
+        "ko": "리서치 그룹 궁리소묻다"
+      },
+      "years": "2021–",
+      "lead": {
+        "en": "Muddha is a research platform that began in 2021. The name comes from the Korean word 묻다: to ask, to question, to keep questioning. Here asking is not about defining a theme or finding an answer. Questions are a practice of estrangement: they unsettle what feels familiar, displace habitual perception, and open room for new relations between body and object, human and non-human, the senses and the world.\n\nMuddha is at once a research lab, an experimental ground and a collective artistic journey. It tests whether the research process itself can become the work.\n\nWhat is a body? Where does consciousness come from? How do the senses compose a world? How do we exist with the non-human?",
+        "ko": "궁리소묻다는 2021년에 문을 연 리서치 플랫폼이다. 이름 그대로 “묻고, 묻고, 또 묻는다”는 태도로 연구하고 실험하며 새로운 길을 찾는 콜렉티브다. 여기서 질문은 주제를 정하거나 답을 찾기 위한 것이 아니다. 익숙한 감각을 낯설게 만들고 습관이 된 지각을 흔들어, 몸과 사물, 인간과 비인간, 감각과 세계 사이에 새로운 관계가 생겨날 자리를 여는 수행이다.\n\n궁리소묻다는 리서치 랩이자 실험장이며, 예술가들이 함께 걷는 탐구의 길이다. 리서치의 결과가 아니라 과정 자체가 작품이 될 수 있는지를 실험한다.\n\n몸은 무엇인가? 의식은 어디에서 오는가? 감각은 세계를 어떻게 구성하는가? 비인간 존재와 우리는 어떻게 함께 존재하는가?"
+      },
+      "sections": [
+        {
+          "years": "2020–2022",
+          "heading": {
+            "en": "Strange Beauty",
+            "ko": "스트레인지 뷰티"
+          },
+          "text": {
+            "en": "Strange Beauty began in Zen practice and grew through an international collaboration with Théâtre de Liège in Belgium and the National Theater Company of Korea. Visual artists, dancers, actors and sound artists each brought their own language. Zen practice is the act of watching images arise and dissolve in the mind, both still and dynamic. Inspired by Zen koans, the artists translated these encounters into movement, image, voice and sound. Rather than seeking beauty as a norm, the project explored beauty as something generated through the collision of the senses. It became a process of relearning the senses.",
+            "ko": "스트레인지 뷰티는 참선 수행에서 출발해 벨기에 리에주 극장, 국립극단과의 국제 협업으로 만들어졌다. 시각예술가, 무용수, 배우, 사운드 아티스트가 각자의 언어를 가지고 모였다. 참선은 마음에서 끊임없이 일어나고 사라지는 이미지를 바라보는, 역동적이면서도 고요한 행위다. 예술가들은 선사들의 공안에서 얻은 영감을 움직임과 이미지, 목소리와 소리로 옮겼다. 아름다움을 규범으로 찾기보다 감각의 충돌 속에서 생겨나는 것으로 탐구했고, 이 과정은 감각을 다시 배우는 일이 되었다."
+          },
+          "images": [
+            "img/sb-clay.jpg",
+            "img/up-1792132248062.jpg",
+            "img/up-1792132255285.jpg",
+            "img/up-1792132280542.jpg",
+            "img/up-1792132283200.jpg"
+          ]
+        },
+        {
+          "years": "2022–2024",
+          "heading": {
+            "en": "Singularity",
+            "ko": "싱귤래리티"
+          },
+          "text": {
+            "en": "The next step translated mathematics, physics and philosophy into the language of body and performance. The Mathematical Body (2022) embodied mathematical ideas as lived sensation. The Large, the Small, the Mind (2023) took the body apart through quantum physics and expanded it toward a cosmic horizon. Singularity (2024) turned an entire four-storey exhibition building into a structure of consciousness. The mind revealed itself not as a substance but as an infinite sea of thoughts, memories, sensations, impulses and affects, constantly arising and dissolving. Scientific facts, assumptions and speculative statements drifted through the performance like background music.",
+            "ko": "다음 단계에서는 수학, 물리학, 철학을 몸과 퍼포먼스의 언어로 번역했다. 〈수학하는 몸〉(2022)은 수학적 개념을 신체의 감각으로 옮겼고, 〈우주양자마음〉(2023)은 양자역학으로 몸을 분해해 우주적 시선으로 넓혔으며, 〈싱귤래리티〉(2024)는 4층 전시 건물 전체를 하나의 의식 구조로 바꾸었다. 마음은 실체가 아니라 생각, 기억, 감각, 충동, 정동이 끊임없이 일어나고 사라지는 무한한 바다로 드러났다. 과학적 사실과 추정, 과학적 상상력의 문장들이 배경음악처럼 공연 속을 흘렀다."
+          },
+          "images": [
+            "img/up-1792131523230.jpg",
+            "img/up-1792131540710.jpg",
+            "img/up-1792131568758.jpg",
+            "img/up-1792131589209.jpg",
+            "img/up-1792131612905.jpg",
+            "img/up-1792131663950.jpg",
+            "img/up-1792131743429.jpg",
+            "img/up-1792131762839.jpg",
+            "img/up-1792131784374.jpg",
+            "img/up-1792131789761.jpg",
+            "img/up-1792131807913.jpg",
+            "img/up-1792131827374.jpg",
+            "img/up-1792131839796.jpg",
+            "img/up-1792131864457.jpg",
+            "img/up-1792131873985.jpg",
+            "img/up-1792131883779.jpg",
+            "img/up-1792131893384.jpg",
+            "img/up-1792131913116.jpg",
+            "img/up-1792131922082.jpg",
+            "img/up-1792131935319.jpg",
+            "img/up-1792131943132.jpg"
+          ]
+        },
+        {
+          "years": "2022–2024",
+          "heading": {
+            "en": "In the Dark, a Landscape",
+            "ko": "어둠 속에, 풍경"
+          },
+          "text": {
+            "en": "Co-produced with the Korea Disability Arts & Culture Center, In the Dark, a Landscape asked how we can experience what cannot be seen. Blind and sighted participants worked together to dismantle the dominance of vision in art, through dream annotations, sound drawings, language sculptures and improvisations of body, sound and touch. Audiences stepped into the borderlands of perception. The work went beyond the frame of disability arts to ask how art itself can expand the conditions of perception.",
+            "ko": "장애인문화예술원과 공동 제작한 〈어둠 속에, 풍경〉은 보이지 않는 것을 어떻게 경험할 수 있는가를 물었다. 시각장애인과 비장애인 예술가가 함께 시각 중심의 예술 경험을 해체하고, 꿈 주석, 소리그림, 언어 조각, 몸과 소리와 촉각의 즉흥으로 다른 감각들의 공존을 실험했다. 관객은 직접 감각의 경계에 서 보았다. ‘장애예술’의 틀을 넘어, 예술이 지각의 조건 자체를 어떻게 넓힐 수 있는지를 탐구한 작업이다."
+          },
+          "images": []
+        },
+        {
+          "years": "2021–",
+          "heading": {
+            "en": "Gungri Academy",
+            "ko": "궁리아카데미"
+          },
+          "text": {
+            "en": "Since 2021 Muddha has run Gungri Academy, residential workshops at Tutbat Arts Farm in Hwacheon: improvisation as practice, red-nose clown improvisation in Orange, Red and Black levels, and mask work. Each class is limited to ten people. The work begins before intention and will, in the moment of improvisation, where every being is both object and subject.",
+            "ko": "2021년부터 화천 예술텃밭에서 레지던시 워크숍 궁리아카데미를 열고 있다. 즉흥수행법, 빨간코 광대 즉흥(Orange, Red, Black), 가면 워크숍으로 이루어지며 회당 10명 이내로 진행한다. 의도와 의지가 생기기 이전, 모든 존재가 객체이면서 주체가 되는 즉흥의 순간에서 작업을 시작한다."
+          },
+          "images": []
+        },
+        {
+          "years": "Next",
+          "heading": {
+            "en": "Consciousness and the senses as material",
+            "ko": "물질로서의 의식과 감각"
+          },
+          "text": {
+            "en": "The next stage turns toward consciousness and the senses as material forms. Are mind, soul and spirit only abstractions cloaked in mystery, or can they be approached as physical elements and shaped into tangible forms? Memories, fragments of the body, the sensation of being alive and the awareness of that sensation become raw material. The questions also extend to artificial intelligence, a new object and non-human agent: what ethical relation do we form when we make work with it? Visual artists, sound artists, a pansori singer and physical performers will build a stage that reconfigures the relations between human and non-human, body and world.",
+            "ko": "다음 단계는 의식과 감각을 물질적 형식으로 다루는 작업이다. 마음, 영혼, 정신은 신비의 안개 속에 있는 추상일 뿐일까, 아니면 물리적 요소로서 손에 잡히는 형태로 빚을 수 있을까. 기억, 몸의 조각들, 살아 있음의 감각과 그것을 알아차리는 감각이 재료가 된다. 질문은 인공지능으로도 이어진다. 새로운 오브제이자 비인간 행위자인 AI와 함께 작업한다는 것은 어떤 윤리적 관계를 만드는 일인가. 시각작가, 사운드작가, 판소리 퍼포머, 피지컬 퍼포머가 함께 인간과 비인간, 몸과 세계의 관계를 다시 짜는 무대를 만든다."
+          },
+          "images": []
+        }
+      ]
+    }
   }
 }
